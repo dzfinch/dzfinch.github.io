@@ -6,7 +6,6 @@ repos:
           - id: check-yaml
           - id: end-of-file-fixer
             types: [python]
-          - id: trailing-whitespace
           - id: requirements-txt-fixer
           - id: check-added-large-files
             args: ["--maxkb=500"]
@@ -15,8 +14,3 @@ repos:
       rev: 25.1.0
       hooks:
           - id: black-jupyter
-
-    - repo: https://github.com/kynan/nbstripout
-      rev: 0.8.1
-      hooks:
-          - id: nbstripout
