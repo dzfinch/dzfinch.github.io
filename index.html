@@ -40,7 +40,7 @@
 						<div class="inner">
 							<div class="logo"><span class="icon solid fa-satellite"></span></div>
 							<h2>Dryver Z. Finch</h2>
-							<p>Geographer and graduate researcher translating satellite and UAV imagery into action for conservation, resource management, and disease surveillance.</p>
+							<p>Geographer and graduate researcher translating satellite and UAV imagery into action for conservation, resource management, and disease surveillance. Latest work: <strong>Plaknit</strong>, the living record of my thesis as I productionize PlanetScope mosaics for anthrax surveillance.</p>
 							<ul class="actions">
 								<li><a href="Finch_CV_Oct2025.pdf" class="button primary">Download CV</a></li>
 								<li><a href="mailto:dryver.finch@outlook.com" class="button">Email Dryver</a></li>
@@ -51,19 +51,19 @@
 				<!-- Plaknit Feature -->
 					<section id="plaknit" class="wrapper spotlight style1">
 						<div class="inner">
-							<a href="#" class="image"><img src="images/pic04.jpg" alt="Plaknit concept art" /></a>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="PlanetScope strips being processed in Plaknit" /></a>
 							<div class="content">
-								<p class="special">New development</p>
-								<h2 class="major">Introducing Plaknit</h2>
-								<p>Plaknit is my newest build: a lightweight kit that knits satellite, UAV, and lab data into ready-to-use playbooks for field teams. It bundles the repeatable code, documentation, and QA steps I rely on for disease surveillance and habitat diagnostics, so collaborators can launch a sensing workflow without starting from scratch.</p>
+								<p class="special">Thesis field log</p>
+								<h2 class="major">Plaknit: documenting the build</h2>
+								<p>Plaknit is the open notebook for my Master's thesis, where I record every PlanetScope processing decision, test, and QA step as I map anthrax-prone rangelands. The repo packages the GDAL + Orfeo Toolbox workflows I use so collaborators can replay the mosaics or adapt the code to new outbreaks.</p>
 								<ul>
-									<li>Modular templates that spin up Python notebooks, dashboards, and mission checklists in minutes.</li>
-									<li>Pre-tuned spectral indices and change-detection routines optimized for vegetation stress and anthrax landscape monitoring.</li>
-									<li>Optional hooks for UAV flight logs and lab metadata, keeping ground truth aligned with remote sensing outputs.</li>
+									<li>Parallel masking of Planet strips against their UDM rasters to remove haze, seams, and nodata artifacts.</li>
+									<li>Pre-tuned Orfeo Toolbox mosaicking with RAM hints so the same pipeline runs on laptops or HPC schedulers.</li>
+									<li>Python helpers for normalized-difference indices and Random Forest classification on Planet stacks, all tracked alongside thesis notes.</li>
 								</ul>
 								<ul class="actions">
-									<li><a href="mailto:dryver.finch@outlook.com?subject=Plaknit%20collaboration" class="button primary">Request a walkthrough</a></li>
-									<li><a href="projects.html" class="button">See the roadmap</a></li>
+									<li><a href="https://github.com/dzfinch/plaknit" class="button primary" target="_blank" rel="noopener">View the repo</a></li>
+									<li><a href="https://dzfinch.github.io/plaknit" class="button" target="_blank" rel="noopener">Read the docs</a></li>
 								</ul>
 							</div>
 						</div>
