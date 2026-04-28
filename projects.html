@@ -30,7 +30,7 @@
 								<li><a href="about.html">About</a></li>
 								<li><a href="projects.html">Projects</a></li>
 								<li><a href="contact.html">Contact</a></li>
-								<li><a href="Finch_CV_March_2026_Redacted.pdf">CV</a></li>
+								<li><a href="Finch_CV_April_2026_Redacted.pdf">CV</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -40,8 +40,8 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Projects</h2>
-								<p>Plaknit is my thesis log for processing PlanetScope mosaics at scale—this page now centers on the workstreams, documentation, and talks that grow out of that repo.</p>
+								<h2>Research &amp; Projects</h2>
+								<p>A running log of research threads, software, and applied work — from satellite disease surveillance to AI-driven maritime analytics.</p>
 							</div>
 						</header>
 
@@ -49,70 +49,93 @@
 							<div class="wrapper">
 								<div class="inner">
 
-									<section>
-										<h3 class="major">Plaknit thesis log</h3>
-										<p>Every commit in <a href="https://github.com/dzfinch/plaknit" target="_blank" rel="noopener">plaknit</a> captures how I'm building the Satellite Anthrax Surveillance thesis—from PlanetScope ordering and QA to the automation that makes those mosaics repeatable.</p>
-										<ul class="alt">
-											<li><strong>PlanetScope focus</strong> - documenting how UDM-masked strips become seamless mosaics for the Texas Anthrax Triangle.</li>
-											<li><strong>Automation notes</strong> - tracking CLI + Python API decisions so the GDAL/OTB workflow scales from laptops to HPC schedulers.</li>
-											<li><strong>Analysis checkpoints</strong> - storing normalized-difference recipes and Random Forest experiments alongside the datasets they describe.</li>
-										</ul>
+									<!-- ── Plaknit ── -->
+									<section id="plaknit">
+										<h3 class="major">Plaknit — thesis open notebook</h3>
+										<p>Every commit in <a href="https://github.com/dzfinch/plaknit" target="_blank" rel="noopener">plaknit</a> captures how I'm building the Satellite Anthrax Surveillance thesis—from PlanetScope ordering and QA to the automation that makes those mosaics repeatable on laptops or HPC schedulers.</p>
+										<div class="box alt">
+											<div class="row gtr-uniform">
+												<div class="col-12">
+													<h4>PlanetScope mosaic engine</h4>
+													<p>GDAL-powered masking cleans each strip against its UDM raster before Orfeo Toolbox stitches everything together with RAM hints tuned for multi-hundred scene jobs. Documents how UDM-masked strips become seamless mosaics for the Texas Anthrax Triangle.</p>
+												</div>
+												<div class="col-12">
+													<h4>Landcover classification</h4>
+													<p>The <code>plaknit.classify</code> module handles Random Forest training and inference against Planet stacks for disease-surveillance mapping.</p>
+												</div>
+											</div>
+										</div>
 										<ul class="actions">
 											<li><a href="https://github.com/dzfinch/plaknit" class="button primary" target="_blank" rel="noopener">Repository</a></li>
 											<li><a href="https://dzfinch.github.io/plaknit" class="button" target="_blank" rel="noopener">Documentation</a></li>
 										</ul>
 									</section>
 
-									<section>
-										<h3 class="major">Toolkit workstreams</h3>
-										<div class="box alt">
-											<div class="row gtr-uniform">
-												<div class="col-12">
-													<h4>PlanetScope mosaic engine</h4>
-													<p>GDAL-powered masking cleans each strip with its corresponding UDM raster before Orfeo Toolbox mosaics everything together using RAM hints tuned for multi-hundred scene jobs.</p>
-												</div>
-												<div class="col-12">
-													<h4>Spectral analysis helpers</h4>
-													<p>Lightweight <code>plaknit.analysis</code> utilities compute normalized-difference indices straight from raster files or NumPy arrays, so I can benchmark vegetation stress without spinning up new notebooks.</p>
-												</div>
-												<div class="col-12">
-													<h4>Random Forest risk modeling</h4>
-													<p>The <code>plaknit.classify</code> module handles training and inference against Planet stacks, keeping polygons, model binaries, and raster outputs in sync for disease-surveillance mapping.</p>
-												</div>
-											</div>
-										</div>
-									</section>
-
-									<section>
-										<h3 class="major">Docs + teaching assets</h3>
-										<p>The MkDocs site and supporting labs double as my own field manual—what I teach is what runs plaknit.</p>
+									<!-- ── Anthrax Thesis ── -->
+									<section id="anthrax-thesis">
+										<h3 class="major">Satellite anthrax surveillance — thesis research</h3>
+										<p>My master's thesis integrates PlanetScope multispectral imagery, cloud computing, and ecological niche modeling to map environmental precursors to anthrax outbreaks in the Texas Anthrax Triangle. The goal is a reproducible remote sensing framework that other researchers can adapt to new anthrax-endemic regions.</p>
 										<ul class="alt">
-											<li><strong>Installation &amp; CLI walkthrough</strong> - step-by-step setup plus command reference. <a href="https://dzfinch.github.io/plaknit/usage/" target="_blank" rel="noopener">Read the guide</a></li>
-											<li><strong>API reference</strong> - detailed docs for <code>plaknit.mosaic</code>, <code>plaknit.analysis</code>, and <code>plaknit.classify</code>. <a href="https://dzfinch.github.io/plaknit/plaknit/" target="_blank" rel="noopener">Browse functions</a></li>
-											<li><strong>Example notebook</strong> - reproducible walkthrough of masking, mosaicking, and index generation. <a href="https://github.com/dzfinch/plaknit/blob/main/docs/examples/intro.ipynb" target="_blank" rel="noopener">Open on GitHub</a></li>
-											<li><strong>Remote sensing labs</strong> - UTK coursework (Pix4D QC, Earth Engine indices, classification drills) that feeds directly into plaknit QA habits. <a href="examples/Lab1_IntroToImagery.pdf" target="_blank" rel="noopener">View a sample lab</a></li>
+											<li>High-resolution land cover and phenological analysis of outbreak landscapes.</li>
+											<li>Ecological niche modeling with HPC-accelerated workflows.</li>
+											<li>Open-source tooling via <a href="https://github.com/dzfinch/plaknit" target="_blank" rel="noopener">plaknit</a> to make the pipeline reproducible.</li>
 										</ul>
 									</section>
 
-									<section>
+									<!-- ── Maritime AI/ML ── -->
+									<section id="maritime-ai">
+										<h3 class="major">Maritime surveillance AI/ML — ORNL</h3>
+										<p>During two terms at Oak Ridge National Laboratory's Remote Sensing Group, I joined an interdisciplinary team applying machine learning to maritime domain awareness. The work centered on building scalable pipelines for detecting and characterizing vessels in commercial satellite imagery.</p>
+										<ul class="alt">
+											<li><strong>Deep learning pipelines</strong> — developed and evaluated TensorFlow models for vessel detection, benchmarking output against operational performance thresholds.</li>
+											<li><strong>Sensor assessment</strong> — evaluated commercial satellite and sensor modalities for maritime surveillance suitability across resolution, revisit, and coverage dimensions.</li>
+											<li><strong>Analytic automation</strong> — built processing automation that reduced manual handling in the imagery-to-intelligence workflow.</li>
+										</ul>
+									</section>
+
+									<!-- ── Field Work ── -->
+									<section id="field">
+										<h3 class="major">Field campaigns</h3>
+										<ul class="alt">
+											<li><strong>Cataloochee Valley UAS survey</strong> (2025) — aerial imaging in Great Smoky Mountains National Park supporting NSF RAPID Grant #2501466.</li>
+											<li><strong>Heathsville archaeological survey</strong> (2025) — aerial data collection with the UTK Department of Anthropology in Heathsville, Virginia.</li>
+											<li><strong>Hog-spot monitoring</strong> (2025) — UAV-based spatial analysis of feral hog activity, presented at TN View Annual Webinar.</li>
+										</ul>
+									</section>
+
+									<!-- ── Teaching Assets ── -->
+									<section id="teaching-assets">
+										<h3 class="major">Teaching assets</h3>
+										<p>Lab materials I write for UTK courses double as documentation for my own workflows — what I teach is what I run.</p>
+										<ul class="alt">
+											<li><strong>Lab 1 – Intro to Imagery</strong> <a href="examples/Lab1_IntroToImagery.pdf" target="_blank" rel="noopener">View PDF</a></li>
+											<li><strong>Lab 2 – Earth Engine Foundations</strong> <a href="https://colab.research.google.com/github/dzfinch/dzfinch.github.io/blob/main/examples/Lab_2_Earth_Engine.ipynb" target="_blank" rel="noopener">Open in Colab</a></li>
+											<li><strong>Lab 4 – Image Classification</strong> <a href="https://colab.research.google.com/github/dzfinch/dzfinch.github.io/blob/main/examples/Lab_4_Image_Classification.ipynb" target="_blank" rel="noopener">Open in Colab</a></li>
+											<li><strong>Lab 5 – Advanced Analysis</strong> <a href="https://colab.research.google.com/github/dzfinch/dzfinch.github.io/blob/main/examples/Lab_5_Advanced_Analysis.ipynb" target="_blank" rel="noopener">Open in Colab</a></li>
+											<li><strong>GEOG 314 Lab 1 – Pix4D Orthomosaic &amp; DSM QA</strong> <a href="examples/GEOG314_Lab01_Pix4DOrthomosaic_DSM.pdf" target="_blank" rel="noopener">View PDF</a></li>
+										</ul>
+									</section>
+
+									<!-- ── Talks ── -->
+									<section id="talks">
 										<h3 class="major">Conference talks</h3>
-										<p>I share plaknit progress and thesis findings with the geospatial community to pressure-test the workflow and invite collaborators.</p>
 										<ul>
 											<li><strong>ASPRS Mid-South</strong> (March 2026, Oak Ridge) — Introducing plaknit: An Open-Source Python Software Package for Large-Scale PlanetScope Imagery Processing.</li>
 											<li><strong>AAG Symposium on Spatial AI and Data Science</strong> (March 2026, San Francisco) — Mapping High Resolution Anthrax Ecologies: Integrating PlanetScope Data and High-Performance Computing for Ecological Niche Models.</li>
-											<li><strong>AAG Disease Ecologies Session</strong> (March 2025, Detroit) — Landscape or Founder Effect? Examining Bacillus anthracis lineages in the Texas Anthrax Triangle.</li>
-											<li><strong>ASPRS Mid-South</strong> (April 2025, Oak Ridge) — High-Resolution Land Cover and Phenological Analysis of Anthrax Outbreak Landscapes.</li>
-											<li><strong>TN View Annual Webinar</strong> (September 2025) — Hog-Spot Analysis: Monitoring the Fiends of the Smokies.</li>
+											<li><strong>AAG Disease Ecologies Session</strong> (March 2025, Detroit) — Landscape or Founder Effect: Examining differences in land cover characteristics associated with two distinct lineages of <em>Bacillus anthracis</em> in the Texas Anthrax Triangle.</li>
+											<li><strong>ASPRS Mid-South</strong> (April 2025, Oak Ridge) — High-Resolution Land Cover and Phenological Analysis of Anthrax Outbreak Landscapes in the Texas Anthrax Triangle.</li>
+											<li><strong>TN View Annual Webinar</strong> (September 2025) — Hog-Spot Analysis: Monitoring the Fiends of the Smokies with UAS and PlanetScope Imagery.</li>
 											<li><strong>UTK Geo-Symposium</strong> (January 2025) — Narrowly Avoided the Past: Remembering Nathan Bedford Forrest at Parker's Crossroads Battlefield.</li>
 										</ul>
 									</section>
 
+									<!-- ── Collaborate ── -->
 									<section>
 										<h3 class="major">Let's collaborate</h3>
-										<p>If you want to adapt plaknit to a new landscape or need a workshop on PlanetScope processing, I would love to talk through it.</p>
+										<p>If you want to adapt plaknit to a new landscape, discuss maritime or disease-surveillance remote sensing, or need a workshop on PlanetScope processing, I would love to talk.</p>
 										<ul class="actions">
 											<li><a href="mailto:dryver.finch@outlook.com" class="button">Start a conversation</a></li>
-											<li><a href="Finch_CV_March_2026_Redacted.pdf" class="button">Download CV</a></li>
+											<li><a href="Finch_CV_April_2026_Redacted.pdf" class="button">Download CV</a></li>
 										</ul>
 									</section>
 
@@ -128,7 +151,7 @@
 							<p>Ready to explore a project or need more detail? Reach out via email or LinkedIn.</p>
 							<ul class="contact">
 								<li class="icon solid fa-envelope"><a href="mailto:dryver.finch@outlook.com">dryver.finch@outlook.com</a></li>
-\								<li class="icon solid fa-home">Department of Geography &amp; Sustainability, University of Tennessee<br />Knoxville, TN 37996</li>
+								<li class="icon solid fa-home">Department of Geography &amp; Sustainability, University of Tennessee<br />Knoxville, TN 37996</li>
 								<li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/dryverfinch" target="_blank" rel="noopener">linkedin.com/in/dryverfinch</a></li>
 								<li class="icon brands fa-github"><a href="https://github.com/dzfinch" target="_blank" rel="noopener">github.com/dzfinch</a></li>
 							</ul>
